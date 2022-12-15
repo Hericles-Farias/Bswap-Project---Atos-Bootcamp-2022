@@ -13,7 +13,7 @@ of depleted batteries in order to increase battery availability.
 
 ## Overview
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](https://github.com/Hericles-Farias/Bswap-Project---Atos-Bootcamp-2022/blob/main/bswap/src/main/resources/static/images/wallpaper.svg)
 
 A BSS consists in a station where people can swap their depleted batteries (low state of charge)
 for a fully charged one in order to continue their trips. 
