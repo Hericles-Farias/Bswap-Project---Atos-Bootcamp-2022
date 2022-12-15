@@ -358,7 +358,7 @@ You can see this project working here!
 
 - [Héricles Eduardo Oliveira Farias](https://www.github.com/Hericles-Farias)
 <div align="center">
-[![Watch the video](https://img.youtube.com/vi/hMABEMjago0/0.jpg)](https://youtu.be/hMABEMjago0)
+[![Watch the video](https://img.youtube.com/vi/hMABEMjago0/0.jpg)](https://www.youtube.com/watch?v=hMABEMjago0)
 </div>
 
 
