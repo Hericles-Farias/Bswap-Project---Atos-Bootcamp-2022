@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/userRelated/evForm.css">
+    <title>Electric Vehicle</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a th:href="@{/bswap/{homePage}(homePage=${homePage})}">
+                <img src="/images/BswapBW.png" alt="Logo Bswap" width="220">
+            </a>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/bswap/{homePage}(homePage=${homePage})}">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
+            </nav>
+    </header>
+
+    <main>
+
+        <h1>New EV</h1>
+
+        <script th:if="${param.error}">
+            alert("Could not perform the operation!");
+        </script>
+
+        <script th:if="${param.EVandBattsuccess}">
+            alert("EV and Battery added with succcess!");
+        </script>
+        
+        <script th:if="${param.EVsuccess}">
+            alert("EV added with succcess!");
+        </script>
+
+
+        
+
+        <!-- ESSE @{id} ele tá pegando direto da @PathVariable que chamou este html! -->
+        <div class="loginF">
+		<form th:action="@{/bswap/myProfile/{id}/addEV(id=${id})}" method="post" th:object="${EVForm}">
+			
+            <div>
+			    <input type="text" name="plate" th:field="*{plate}" required placeholder="Plate"/>
+			</div>
+			<div>
+			    <input type="text" name="brand" th:field="*{brand}" required placeholder="Brand"/>
+			</div>
+            <div>
+                <input type="text" name="model" th:field="*{model}" required placeholder="Model"/>
+            </div>
+
+            <div>
+            
+                <!-- <input list="battSpecs" name="battSpecs"/> -->
+                <label for="battSpec">Choose the battery Model</label>
+                <div class="bdatalist">
+                <!-- <datalist id="battSpecs"> -->
+                    <select th:field="*{battSpec}">
+                        <option th:each="batt : ${batts}" th:value="${batt}" th:text="${batt}" th:selected="${batt=='N/A'}" ></option>
+                    </select>
+                </div>
+                <!-- </datalist> -->
+            
+            </div>
+			
+            <button type="submit">Save</button>
+		</form>
+        </div>
+        <a class="aStyled" th:href="@{/bswap/myProfile/{id}(id=${id})}">My Profile</a>
+    </main>
+
+    <footer>
+        <div class="footer">
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+
+            <div class="row">
+                Bswap Copyright © 2022 - All rights reserved 
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

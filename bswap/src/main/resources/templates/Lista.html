@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyList</title>
+</head>
+<body>
+    
+<main>
+
+    <form>
+        <p>
+            <label for="state">State/Province</label>
+            <input
+                type="text",
+                name="state",
+                id="state",
+                placeholder="Select a Country"
+            />
+        </p>
+        <p>
+            <label for="country">Country</label>
+            <input type="text" list="countries" name="country" id="country"/>
+        </p> 
+        <!-- one data list driving a second datalist -->
+        <datalist id="countries">
+            <option>Canada</option>
+            <option>Mexico</option>
+        </datalist>
+
+        <datalist id="mexico">
+            <option value="DB">Chiahaha</option>
+            <option value="CC">Durango</option>
+            <option value="HB">Puebla</option>
+        </datalist>
+        
+        <datalist id="canada">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columnia</option>
+            <option value="MB">Ontario</option>
+        </datalist>
+
+    </form>
+
+</main>
+
+
+</body>
+</html>

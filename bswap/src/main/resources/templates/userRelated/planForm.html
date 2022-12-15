@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/userRelated/planForm.css">
+    <title>Add a New Plan</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a th:href="@{/bswap/{homePage}(homePage=${homePage})}">
+                <img src="/images/BswapBW.png" alt="Logo Bswap" width="220">
+            </a>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/bswap/{homePage}(homePage=${homePage})}">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
+            </nav>
+    </header>
+    <main>
+        <h1>Create a New Plan</h1>
+        <div class="loginF">
+            <form th:action="@{/bswap/plans/addPlan}" method="post" th:object="${planModel}">
+                
+                <div>
+                    <input type="text" name="name" th:field="*{name}" required placeholder="Name"/>
+                </div>
+                <div>
+                    <input type="text" name="energyPrice" th:field="*{energyPrice}" required placeholder="Energy Price"/>
+                </div>
+                <div>
+                    <input type="text" name="fixedCost" th:field="*{fixedCost}" required placeholder="Fixed Cost"/>
+                </div>
+                <div>
+                    <input type="text" name="renewPeriod" th:field="*{renewPeriod}" required placeholder="Renew Period"/>
+                </div>
+                <button type="submit">Save Plan</button> 
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+
+            <div class="row">
+                Bswap Copyright © 2022 - All rights reserved 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

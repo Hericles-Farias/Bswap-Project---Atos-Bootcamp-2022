@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/userRelated/planSelection.css">
+    <title>Plan Selection</title>
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <a th:href="@{/bswap/{homePage}(homePage=${homePage})}">
+                <img src="/images/BswapBW.png" alt="Logo Bswap" width="220">
+            </a>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/bswap/{homePage}(homePage=${homePage})}">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
+            </nav>
+    </header>
+
+    <main>
+        <script th:if="${param.planChanged}">
+            alert("Plan Changed with with succcess!");
+        </script>
+        <script th:if="${param.planNotChanged}">
+            alert("Could not change plan!");
+        </script>
+        
+        <h1>Select a Plan</h1>
+        <div class="cards">
+            <div class="card">
+
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>Bronze</h2>
+                    <p>Energy Price: 21 R$/kWh</p>
+                    <p>Fixed Costs: 7 R$</p>
+                    <p>Renew Period: Monthly</p>
+
+                    <a  th:href="@{/bswap/myProfile/{id}/changeToPlan/BRONZE(id=${id})}"
+                    th:data-confirm-delete="|Are you sure you want to change to this Plan?|"
+                    onclick="if(!confirm(this.getAttribute('data-confirm-delete'))) return false">
+                    Select
+                    </a>
+                    
+                </div>
+                <img src="/images/bronze.svg">
+            </div>
+    
+            <div class="card">
+    
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>Silver</h2>
+                    <p>Energy Price: 17 R$/kWh</p>
+                    <p>Fixed Costs: 12 R$</p>
+                    <p>Renew Period: Semesterly</p>
+                    <a  th:href="@{/bswap/myProfile/{id}/changeToPlan/SILVER(id=${id})}"
+                    th:data-confirm-delete="|Are you sure you want to change to this Plan?|"
+                    onclick="if(!confirm(this.getAttribute('data-confirm-delete'))) return false">
+                    Select
+                    </a>
+                </div>
+                <img src="/images/silver.svg">
+            </div>
+
+            <div class="card">
+    
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>Gold</h2>
+                    <p>Energy Price: 12 R$/kWh</p>
+                    <p>Fixed Costs: 15 R$</p>
+                    <p>Renew Period: Annualy</p>
+                    <a  th:href="@{/bswap/myProfile/{id}/changeToPlan/GOLD(id=${id})}"
+                    th:data-confirm-delete="|Are you sure you want to change to this Plan?|"
+                    onclick="if(!confirm(this.getAttribute('data-confirm-delete'))) return false">
+                    Select
+                    </a>
+                </div>
+                <img src="/images/gold.svg">
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer">
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+
+            <div class="row">
+                Bswap Copyright © 2022 - All rights reserved 
+            </div>
+        </div>
+    </footer>
+
+</body>
+<!-- We will use this in the card password step -->
+<!-- <script src="/userRelated/main.js"></script> -->
+</html>

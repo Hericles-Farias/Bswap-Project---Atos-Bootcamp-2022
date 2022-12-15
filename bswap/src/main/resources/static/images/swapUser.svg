@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6.3904343mm"
+   height="5.3270416mm"
+   viewBox="0 0 6.3904343 5.3270416"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="bswaplogo.svg"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="17.396097"
+     inkscape:cx="352.98149"
+     inkscape:cy="496.0883"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-108.09374,-131.33923)">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:1.41111px;font-family:Ebrima;-inkscape-font-specification:'Ebrima Bold';text-align:center;text-anchor:middle;fill:#87aade;fill-opacity:1;stroke-width:0.25;stroke-opacity:0.396078"
+       x="109.63373"
+       y="134.4924"
+       id="text236-1-5-7"
+       inkscape:export-filename="bswapLogo.svg"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.41111px;font-family:Poppins;-inkscape-font-specification:'Poppins Bold';text-align:start;text-anchor:start;fill:#666666;fill-opacity:1;stroke-width:0.25"
+         x="109.63373"
+         y="134.4924"
+         id="tspan396-9-3-0">User</tspan></text>
+    <g
+       id="g465-2"
+       transform="translate(-0.30112979,6.0656188)">
+      <path
+         style="fill:#56cbf9;fill-opacity:1;stroke-width:0.181646;stroke-opacity:0.396078"
+         d="m 114.31542,127.26471 c 0,0 -0.13842,-1.01908 -0.53045,-1.2377 -0.82626,-0.46077 -2.80691,0.41993 -2.80691,0.41993 0,0 2.47101,-1.72072 3.40366,-0.99458 0.477,0.37138 -0.0663,1.81235 -0.0663,1.81235 z"
+         id="path465-4-5-6-9"
+         sodipodi:nodetypes="cscsc" />
+      <path
+         style="fill:#ff729f;fill-opacity:1;stroke-width:0.181646;stroke-opacity:0.396078"
+         d="m 108.89919,128.60955 c 0,0 0.13842,1.01908 0.53044,1.2377 0.82627,0.46077 2.80692,-0.41993 2.80692,-0.41993 0,0 -2.47101,1.72072 -3.40367,0.99458 -0.47699,-0.37138 0.0663,-1.81235 0.0663,-1.81235 z"
+         id="path465-4-7-9-7-0"
+         sodipodi:nodetypes="cscsc" />
+      <path
+         style="fill:#56cbf9;fill-opacity:1;stroke:#87aade;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         d="m 114.32286,127.2811 -0.50009,-0.56462 0.50009,0.20434 0.46245,-0.3334 z"
+         id="path3676-6-9" />
+      <path
+         style="fill:#ff80b2;fill-opacity:1;stroke:#87aade;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         d="m 108.89496,128.58245 -0.50009,0.56462 0.50009,-0.20434 0.46245,0.3334 z"
+         id="path3676-1-7-3" />
+    </g>
+  </g>
+</svg>

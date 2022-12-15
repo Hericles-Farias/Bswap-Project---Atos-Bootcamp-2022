@@ -1,0 +1,296 @@
+@import url(//db.onlinewebfonts.com/c/463e96684a261fe795b31a68de0aa0f4?family=GalanoGrotesque-Bold);
+
+:root {
+    --c12: #000;
+    --c11: #111;
+    --c10: #2E2E2E;
+    --c9: #404040;
+    --c8: #595959;
+    --c7: #717171;
+    --c6: #9C9C9C;
+    --c5: #B2B2B2;
+    --c4: #CCC;
+    --c3: #DEDEDE;
+    --c2: #EDEDED;
+    --c1: #F7F7F7;
+    --w: #FFF;
+    --turquoise-blue: #81f4e1ff;
+    --vivid-sky-blue: #56cbf9ff;
+    --french-pink: #ff729fff;
+    --languid-lavender: #d3c4d1ff;
+
+    --mainGreen:#00d05e;
+    --subGreen:#007a31;
+
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    background-color: var(--c12);
+}
+
+.header-container {
+
+    height: 100px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.header-container nav ul {
+    list-style: none;
+    line-height: 96px;
+    color: var(--w);
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    gap: 40px;
+}
+
+.header-container nav ul li {
+    display: inline;
+}
+
+
+body{
+    margin:0;
+background-color: var(--c12);
+    }
+    
+    .footer{
+
+    height: 100px;
+    background:#000;
+    padding:30px 0px;
+    font-family: 'GalanoGrotesque-Bold';
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+    h1{
+        color: black;
+        margin-bottom: 20px;
+    }
+
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    background-color: var(--w);
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* .clicable{
+    color:green;
+    background-color: black;
+}
+
+.unclicable{
+    background-color: red;
+    color:grey;
+} */
+
+.rowH{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.rowC{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--mainGreen);
+    
+}
+
+.entry{
+    margin: 5px;
+}
+
+.periods{
+
+    margin: 5px;
+    text-align: center;
+    
+}
+
+
+
+.available{
+    background-color: var(--subGreen);
+    border: solid var(--subGreen) 1px;
+    border-radius: 7px;
+    padding: 5px;
+    transition: .5s ease;
+}
+
+.available:hover{
+    background-color: var(--mainGreen);
+    border-color: white;
+    
+    
+}
+
+.taken{
+    background-color: var(--mainGreen);
+    border-radius: 7px;
+    padding: 5px;
+    text-decoration: line-through;
+    
+}
+
+.ds{
+    display: flex;
+    flex-direction: row;
+    background-color:var(--mainGreen);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+.dk{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.dl{
+
+    display: flex;
+    flex-direction: row;
+}
+.dm{
+    display: flex;
+    flex-direction: row;
+}
+
+.dt{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 30px;
+    font-size: 11px;
+    margin-bottom: 10px;
+
+}
+
+.dr{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:white;
+    border:solid var(--c12) 5px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.dr > div > span{
+    background-color: white;
+    color: black;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.dr > div > p{
+    background-color: var(--c12);
+    text-align: center;
+    margin-top: 7px;
+    font-size: medium;
+    border-radius: 10px;
+
+}
+
+.gtz{
+    background-color: var(--mainGreen);
+    text-align: center;
+    margin-top: 7px;
+    font-size: medium;
+    
+    border-radius: 10px;
+
+}
+
+.etz{
+    background-color: var(--c12);
+    text-align: center;
+    margin-top: 7px;
+    font-size: medium;
+    border-radius: 10px;
+}
+
+
+
+h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

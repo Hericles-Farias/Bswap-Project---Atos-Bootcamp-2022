@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link rel="stylesheet" href="/userRelated/adminHomePage.css">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="/images/bswapIcon.png">
+		<title>Home Page</title>
+	</head>
+	<body>
+
+        <header>
+            <div class="header-container">
+                <a href="/bswap/adminHomePage"><img src="/images/BswapBW.png" alt="Logo Bswap" width="220"></a>
+                <nav>
+                    <ul>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="pages">
+                <div class="page one">
+                    <div class="WText">
+                        <h1 th:text="'Welcome ' + ${user.nickname}"></h1>
+                        <img src="/images/SwapButton.png" width="25" height="45" onClick="slide('next')">
+                    </div> 
+                    <div class="options">      
+                     
+                        
+                        <div class="opt">
+                            <div>
+                                <box-icon type="solid"  size="lg" color="var(--subGreen)" name='user'></box-icon>
+                            </div>
+                            <a class="innerText" th:href="@{/bswap/myProfile/{id}(id=${user.id})}">My Profile</a>
+                            <div>
+                                <p>Here you can see your personal information</p>
+                            </div>
+                        </div>
+
+                        <div class="opt">
+                            <div>
+                                <box-icon type="solid"  size="lg" color="var(--subGreen)" name='edit'></box-icon>
+                            </div>
+                            <a class="innerText" th:href="@{/bswap/mySchedulings/{id}/showSchedForm(id=${user.id})}">Create New Scheduling</a>
+                            <div>
+                                <p>Here you can create a scheduling </p>
+                            </div>
+                        </div>
+
+                        <div class="opt">
+                            <div>
+                                <box-icon  type="solid"  size="lg" color="var(--subGreen)" name='user-detail'></box-icon>
+                            </div>
+                            <a class="innerText" th:href="@{/bswap/mySchedulings/{id}(id=${user.id})}">My Schedulings</a>
+                            <div>
+                            <p>Here you can see your schedulings</p>
+                            </div>
+                        </div>
+                            
+                    </div>
+    
+                </div>
+                <div class="page two">
+                    <div class="WText">
+                        <h1 th:text="'Welcome ' + ${user.nickname}"></h1>
+                        <img src="/images/SwapButton.png" width="25" height="45" onClick="slide('prev')">
+                        
+                    </div>
+                    
+                    <div class="options">
+
+
+
+                        <div class="opt">
+                            <div>
+                                <box-icon type="solid"  size="lg" color="var(--subGreen)" name='user-plus'></box-icon>
+                            </div>
+                            <a class="innerText" href="/bswap/registeredUsers">Registered Users</a>
+                            <div>
+                                <p>Here you can see all information about the users</p>
+                            </div>
+                        </div>
+
+                        <div class="opt">
+                            <div>
+                                <box-icon type="solid"  size="lg" color="var(--subGreen)" name='cart-add'></box-icon>
+                            </div>
+                            <a class="innerText" href="/bswap/userSchedulings">User Schedulings</a>
+                            <div>
+                                <p>Here you can see all user's schedulings</p>
+                            </div>
+                        </div>
+                            
+                        <div class="opt">
+                            <div>
+                                <box-icon  type="solid"  size="lg" color="var(--subGreen)" name='user-detail'></box-icon>
+                            </div>
+                            <a class="innerText" href="/bswap/dayAhead">Day-Ahead Schedulings</a>
+                            <div>
+                                <p>Here you can see the schedulings for tomorrow</p>
+                            </div>
+                        </div>
+
+                        <div class="opt">
+                            <div>
+                                <box-icon type='solid' size="lg" color="var(--subGreen)" name='car-battery'></box-icon>
+                            </div>
+                            <a class="innerText" href="/bswap/batteries">Batteries</a>
+                            <div>
+                                <p>Here you can see all supported batteries</p>
+                            </div>
+                        </div>
+                            
+                        <div class="opt">
+                            <div>
+                                <box-icon type='solid' size="lg" color="var(--subGreen)" name='purchase-tag'></box-icon>
+                            </div>
+                            <a class="innerText" href="/bswap/plans">Plans</a>
+                            <div>
+                                <p>Here you can see available plans</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="row">
+                    <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+        
+                <div class="row">
+                Bswap Copyright © 2022 - All rights reserved 
+                </div>
+            </div>
+        </footer>
+    
+	</body>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        const pages = document.querySelectorAll(".page");
+        const translateAmount = 100; 
+        let translate = 0;
+
+        slide = (direction) => {
+
+        direction === "next" ? translate -= translateAmount : translate += translateAmount;
+
+        pages.forEach(
+            pages => (pages.style.transform = `translateY(${translate}%)`)
+        );
+        }
+    </script>
+</html>

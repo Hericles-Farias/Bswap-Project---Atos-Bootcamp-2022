@@ -1,0 +1,143 @@
+@import url(//db.onlinewebfonts.com/c/463e96684a261fe795b31a68de0aa0f4?family=GalanoGrotesque-Bold);
+
+:root {
+    --c12: #000;
+    --c11: #111;
+    --c10: #2E2E2E;
+    --c9: #404040;
+    --c8: #595959;
+    --c7: #717171;
+    --c6: #9C9C9C;
+    --c5: #B2B2B2;
+    --c4: #CCC;
+    --c3: #DEDEDE;
+    --c2: #EDEDED;
+    --c1: #F7F7F7;
+    --w: #FFF;
+    --turquoise-blue: #81f4e1ff;
+    --vivid-sky-blue: #56cbf9ff;
+    --french-pink: #ff729fff;
+    --languid-lavender: #d3c4d1ff;
+
+    --mainGreen:#00d05e;
+    --subGreen:#007a31;
+}
+
+
+
+.clicable{
+    color:green;
+    background-color: grey;
+}
+
+.unclicable{
+    background-color: green;
+    color:grey;
+}
+
+.rowH{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.rowC{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    
+    
+}
+
+
+
+
+
+.entry{
+    margin: 5px;
+}
+
+.periods{
+
+    margin: 5px;
+    text-align: center;
+}
+
+/* .hours{
+    display: flex;
+    flex-direction: row;
+} */
+
+.available{
+    background-color: palegreen;
+    padding: 5px;
+}
+
+.taken{
+    background-color: salmon;
+    padding: 5px;
+    
+}
+
+.ds{
+    display: flex;
+    flex-direction: row;
+    background-color: beige;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.dk{
+    display: flex;
+    flex-direction: row;
+}
+.dl{
+
+    display: flex;
+    flex-direction: row;
+}
+.dm{
+    display: flex;
+    flex-direction: row;
+}
+
+.dt{
+    background-color: seashell;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 30px;
+    font-size: 13px;
+
+}
+
+.dr{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:white;
+    border:solid pink 5px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dr > div > span{
+    background-color: white;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.dr > div > p{
+    background-color: pink;
+    text-align: center;
+    margin-top: 7px;
+    font-size: medium;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,168 @@
+@import url(//db.onlinewebfonts.com/c/463e96684a261fe795b31a68de0aa0f4?family=GalanoGrotesque-Bold);
+
+:root {
+    --c12: #000;
+    --c11: #111;
+    --c10: #2E2E2E;
+    --c9: #404040;
+    --c8: #595959;
+    --c7: #717171;
+    --c6: #9C9C9C;
+    --c5: #B2B2B2;
+    --c4: #CCC;
+    --c3: #DEDEDE;
+    --c2: #EDEDED;
+    --c1: #F7F7F7;
+    --w: #FFF;
+    --turquoise-blue: #81f4e1ff;
+    --vivid-sky-blue: #56cbf9ff;
+    --french-pink: #ff729fff;
+    --languid-lavender: #d3c4d1ff;
+
+    --mainGreen:#00d05e;
+    --subGreen:#007a31;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--subGreen);
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--w);
+    font-family: 'GalanoGrotesque-Bold';
+}
+
+header {
+    background-color: var(--w);
+
+}
+
+
+.header-container {
+
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-container img {
+    margin-top: 0px;
+}
+
+.header-container nav ul {
+    list-style: none;
+    line-height: 96px;
+    color: var(--w);
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    gap: 40px;
+}
+
+.header-container nav ul li {
+    display: inline;
+    
+}
+
+/* main{
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    background-color: white;
+    height: 359px;
+} */
+
+.main-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.fa{
+    color: white;
+}
+
+
+h1{
+    text-align: center;
+    
+}
+
+p{
+    padding-left: 10px;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+ 
+.footer{
+height: 150px;
+background-image: linear-gradient(to bottom, #00d05e, #26cd6b, #3ac976, #4ac680, #59c289);
+
+font-family: 'GalanoGrotesque-Bold';
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+
+margin:1% 0%;
+padding:0.6% 0%;
+color:white;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:white;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+}

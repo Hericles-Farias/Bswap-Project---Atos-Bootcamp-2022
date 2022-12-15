@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/userRelated/dayAhead.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a th:href="@{/bswap/{homePage}(homePage=${homePage})}">
+                <img src="/images/BswapBW.png" alt="Logo Bswap" width="220">
+            </a>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/bswap/{homePage}(homePage=${homePage})}">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
+            </nav>
+    </header>
+
+    <main>
+
+        <h1>Day-Ahead Operation</h1>
+        <div class="ds">
+
+            <div class="dk">
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${sete}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                            <div class="taken" th:if="${s.status=='Off'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${oito}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="hours">
+                    <div >
+                        <div class="periods" th:each="s : ${nove}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                            <div class="taken" th:if="${s.status=='Off'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${dez}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${onze}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="dl">
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${doze}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                            <div class="taken" th:if="${s.status=='Off'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${treze}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="hours">
+                    <div >
+                        <div class="periods" th:each="s : ${quatorze}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                            <div class="taken" th:if="${s.status=='Off'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${quinze}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${dezesseis}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="dm">
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${dezesete}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                            <div class="taken" th:if="${s.status=='Off'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${dezoito}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="hours">
+                    <div >
+                        <div class="periods" th:each="s : ${dezenove}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                            <div class="taken" th:if="${s.status=='Off'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${vinte}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="hours">
+                    <div>
+                        <div class="periods" th:each="s : ${vinteum}">
+                            <div class="available" th:if="${s.status=='On'}">
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                            <div class="taken" th:if="${s.status=='Off'}" >
+                                <p th:utext="${#strings.substring(s.date,11,19)}"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        
+        </div>
+
+        <div class="dt">
+        
+            <div class="dr">
+                <div>
+                    <span>07:00 - 08:00</span>
+                    <div th:if="${battSum[0]>0}">
+                        <p class="gtz"  th:text="${battSum[0]}"></p>
+                    </div>
+                    <div th:if="${battSum[0]==0}">
+                        <p class="etz" th:text="${battSum[0]}"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>08:00 - 09:00</span>
+                    <div th:if="${battSum[1]>0}">
+                        <p class="gtz" th:text="${battSum[1]}"></p>
+                    </div>
+                    <div th:if="${battSum[1]==0}">
+                        <p class="etz" th:text="${battSum[1]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>09:00 - 10:00</span>
+                    <div th:if="${battSum[2]>0}">
+                        <p class="gtz" th:text="${battSum[2]}"></p>
+                    </div>
+                    <div th:if="${battSum[2]==0}">
+                        <p class="etz" th:text="${battSum[2]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>10:00 - 11:00</span>
+                    <div th:if="${battSum[3]>0}">
+                        <p class="gtz" th:text="${battSum[3]}"></p>
+                    </div>
+                    <div th:if="${battSum[3]==0}">
+                        <p class="etz" th:text="${battSum[3]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>11:00 - 12:00</span>
+                    <div th:if="${battSum[4]>0}">
+                        <p class="gtz" th:text="${battSum[4]}"></p>
+                    </div>
+                    <div th:if="${battSum[4]==0}">
+                        <p class="etz" th:text="${battSum[4]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>12:00 - 13:00</span>
+                    <div th:if="${battSum[5]>0}">
+                        <p class="gtz" th:text="${battSum[5]}"></p>
+                    </div>
+                    <div th:if="${battSum[5]==0}">
+                        <p class="etz" th:text="${battSum[5]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>13:00 - 14:00</span>
+                    <div th:if="${battSum[6]>0}">
+                        <p class="gtz" th:text="${battSum[6]}"></p>
+                    </div>
+                    <div th:if="${battSum[6]==0}">
+                        <p class="etz" th:text="${battSum[6]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>14:00 - 15:00</span>
+                    <div th:if="${battSum[7]>0}">
+                        <p class="gtz" th:text="${battSum[7]}"></p>
+                    </div>
+                    <div th:if="${battSum[7]==0}">
+                        <p class="etz" th:text="${battSum[7]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>15:00 - 16:00</span>
+                    <div th:if="${battSum[8]>0}">
+                        <p class="gtz" th:text="${battSum[8]}"></p>
+                    </div>
+                    <div th:if="${battSum[8]==0}">
+                        <p class="etz" th:text="${battSum[8]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>16:00 - 17:00</span>
+
+                    <div th:if="${battSum[9]>0}">
+                        <p class="gtz"  th:text="${battSum[9]}"></p>
+                    </div>
+                    <div th:if="${battSum[9]==0}">
+                        <p class="etz" th:text="${battSum[9]}"></p>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>17:00 - 18:00</span>
+                    <div th:if="${battSum[10]>0}">
+                        <p class="gtz"  th:text="${battSum[10]}"></p>
+                    </div>
+                    <div th:if="${battSum[10]==0}">
+                        <p class="etz" th:text="${battSum[10]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>18:00 - 19:00</span>
+                    <div th:if="${battSum[11]>0}">
+                        <p class="gtz" th:text="${battSum[11]}"></p>
+                    </div>
+                    <div th:if="${battSum[11]==0}">
+                        <p class="etz" th:text="${battSum[11]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>19:00 - 20:00</span>
+                    <div th:if="${battSum[12]>0}">
+                        <p class="gtz" th:text="${battSum[12]}"></p>
+                    </div>
+                    <div th:if="${battSum[12]==0}">
+                        <p class="etz" th:text="${battSum[12]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>20:00 - 21:00</span>
+                    <div th:if="${battSum[13]>0}">
+                        <p class="gtz" th:text="${battSum[13]}"></p>
+                    </div>
+                    <div th:if="${battSum[13]==0}">
+                        <p class="etz" th:text="${battSum[13]}"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dr">
+                <div>
+                    <span>21:00 - 22:00</span>
+                    <div th:if="${battSum[14]>0}">
+                        <p class="gtz" th:text="${battSum[14]}"></p>
+                    </div>
+                    <div th:if="${battSum[14]==0}">
+                        <p class="etz" th:text="${battSum[14]}"></p>
+                    </div>
+                </div>
+            </div>
+
+        
+        </div>
+        
+        
+    
+    </main>
+
+    <footer>
+        <div class="footer">
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+
+            <div class="row">
+                Bswap Copyright © 2022 - All rights reserved 
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

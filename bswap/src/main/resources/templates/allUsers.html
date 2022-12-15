@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NickName</th>
+            <th scope="col">Email</th>
+            <th scope="col">Plan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="user : ${users}">
+                <td data-th-text="${user.id}"></td>
+                <td data-th-text="${user.nickname}"></td>
+                <td data-th-text="${user.username}"></td>
+                <td data-th-text="${user.currentPlan.name}"></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+@import url(//db.onlinewebfonts.com/c/463e96684a261fe795b31a68de0aa0f4?family=GalanoGrotesque-Bold);
+
+:root {
+    --c12: #000;
+    --c11: #111;
+    --c10: #2E2E2E;
+    --c9: #404040;
+    --c8: #595959;
+    --c7: #717171;
+    --c6: #9C9C9C;
+    --c5: #B2B2B2;
+    --c4: #CCC;
+    --c3: #DEDEDE;
+    --c2: #EDEDED;
+    --c1: #F7F7F7;
+    --w: #FFF;
+    --turquoise-blue: #81f4e1ff;
+    --vivid-sky-blue: #56cbf9ff;
+    --french-pink: #ff729fff;
+    --languid-lavender: #d3c4d1ff;
+
+    --mainGreen:#00d05e;
+    --subGreen:#007a31;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    background-color: var(--c12);
+}
+
+.header-container {
+
+    height: 100px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.header-container nav ul {
+    list-style: none;
+    line-height: 96px;
+    color: var(--w);
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    gap: 40px;
+}
+
+.header-container nav ul li {
+    display: inline;
+}
+
+
+body{
+    margin:0;
+    background-color: var(--c12);
+    }
+    
+    .footer{
+
+    background:#000;
+    padding:10px 0px;
+    font-family: 'GalanoGrotesque-Bold';
+    text-align:center;
+    }
+
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+
+    .footer .row a:hover{
+    color:#fff;
+    }
+
+    .footer .row ul{
+    width:100%;
+    }
+
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    /* background-color: var(--mainGreen); */
+
+    background-image: linear-gradient(to bottom, #00d05e, #26cd6b, #3ac976, #4ac680, #59c289);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+    height: 500px;
+
+}
+
+.card{
+    position: relative;
+    width: 450px;
+    height: 300px;
+    /* background: #ccc; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+
+}
+
+.card .circle{
+
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.card .circle:before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:var(--w);
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+
+}
+
+.card:hover .circle:before{
+
+    background-color:var(--subGreen) ;
+    clip-path: circle(400px at center);
+
+}
+
+.card img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height: 200px;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.card:hover img{
+    left:75%;
+    height: 300px;
+}
+
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 10px 20px;
+    transition:0.3s;
+    visibility: hidden;
+}
+
+.card:hover .content{
+
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 10px;
+
+}
+
+.card .content p{
+    color: #fff;
+
+}
+
+.card .content a{
+    position: relative;
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+
+
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    color: white;
+}

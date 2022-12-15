@@ -1,0 +1,189 @@
+@import url(//db.onlinewebfonts.com/c/463e96684a261fe795b31a68de0aa0f4?family=GalanoGrotesque-Bold);
+
+:root {
+    --c12: #000;
+    --c11: #111;
+    --c10: #2E2E2E;
+    --c9: #404040;
+    --c8: #595959;
+    --c7: #717171;
+    --c6: #9C9C9C;
+    --c5: #B2B2B2;
+    --c4: #CCC;
+    --c3: #DEDEDE;
+    --c2: #EDEDED;
+    --c1: #F7F7F7;
+    --w: #FFF;
+    --turquoise-blue: #81f4e1ff;
+    --vivid-sky-blue: #56cbf9ff;
+    --french-pink: #ff729fff;
+    --languid-lavender: #d3c4d1ff;
+
+    --mainGreen:#00d05e;
+    --subGreen:#007a31;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    background-color: var(--c12);
+}
+
+.header-container {
+
+    height: 100px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.header-container nav ul {
+    list-style: none;
+    line-height: 96px;
+    color: var(--w);
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    gap: 40px;
+}
+
+.header-container nav ul li {
+    display: inline;
+}
+
+
+body{
+    margin:0;
+    background-color: var(--c12);
+    }
+    
+    .footer{
+    
+    height: 180px;
+    background:#000;
+    padding:30px 0px;
+    font-family: 'GalanoGrotesque-Bold';
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'GalanoGrotesque-Bold';
+    font-style: normal;
+    background-color: var(--w);
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    align-items: center;
+
+}
+
+.aStyled{
+    font-family: 'GalanoGrotesque-Bold';
+    background-color: var(--mainGreen); /* Green */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    transition: .5s;
+}
+
+.aStyled:hover{
+    transform: scale(1.1);
+}
+
+
+h1{
+    color: black;
+}
+  
+.deleteButton{
+    font-family: 'GalanoGrotesque-Bold';
+    font-size: small;
+    background-color: var(--c12); /* Green */
+    border-radius: 10px;
+    border-color: white;
+    color:white;
+    padding: 3px 5px;
+
+}
+
+.dBColor{
+    background-color: var(--subGreen);
+    padding: 10px;
+    gap: 20px;
+}
+
+
+.eachS{
+    width: 300px;
+    background-color: var(--subGreen);
+    border-radius: 10px;
+    padding: 7px;
+    margin: 5px;
+    transition: .5s;
+}
+
+.eachS:hover{
+    transform: scale(1.1);
+}

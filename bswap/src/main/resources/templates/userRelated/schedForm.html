@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/userRelated/schedForm.css">
+    <link rel="stylesheet" href="/userRelated/style.css">
+    <title>Create Scheduling</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a th:href="@{/bswap/{homePage}(homePage=${homePage})}">
+                <img src="/images/BswapBW.png" alt="Logo Bswap" width="220">
+            </a>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/bswap/{homePage}(homePage=${homePage})}">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+
+            </nav>
+    </header>
+
+    <main>
+
+        <script th:if="${param.success}">
+            alert("Scheduling added with succcess!");
+        </script>
+
+        <script th:if="${param.error}">
+            alert("Scheduling failed to be created!");
+        </script>
+        <h1>Select a Period!</h1>
+        
+
+        <form th:action="@{/bswap/mySchedulings/{id}/addScheduling(id=${id})}" method="post" th:object="${schedForm}">
+            
+            <div class="rowC formStyle">
+                <div class="rowH" >
+
+                    <div>
+                        <select id="selectBox7" onchange="changeFunc7()">
+                            
+                                <option th:each="p : ${sete}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                            
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox8" onchange="changeFunc8()">
+                            <option th:each="p : ${oito}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox9" onchange="changeFunc9()">
+                            <option th:each="p : ${nove}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox10" onchange="changeFunc10()">
+                            <option th:each="p : ${dez}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox11" onchange="changeFunc11()">
+                            <option th:each="p : ${onze}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="rowH">
+
+                    <div>
+                        <select id="selectBox12" onchange="changeFunc12()">
+                            <option th:each="p : ${doze}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox13" onchange="changeFunc13()">
+                            <option th:each="p : ${treze}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox14" onchange="changeFunc14()">
+                            <option th:each="p : ${quatorze}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox15" onchange="changeFunc15()">
+                            <option th:each="p : ${quinze}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox16" onchange="changeFunc16()">
+                            <option th:each="p : ${dezesseis}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="rowH">
+
+                    <div>
+                        <select id="selectBox17" onchange="changeFunc17()">
+                            <option th:each="p : ${dezesete}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox18" onchange="changeFunc18()">
+                            <option th:each="p : ${dezoito}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox19" onchange="changeFunc19()">
+                            <option th:each="p : ${dezenove}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox20" onchange="changeFunc20()">
+                            <option th:each="p : ${vinte}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="selectBox21" onchange="changeFunc21()">
+                            <option th:each="p : ${vinteum}" th:value="${p.date}" th:utext="${#strings.substring(p.date,11,19)}"></option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                Your choice: <p id="yourChoice"></p>
+            </div>
+            <h2>Select a Battery!</h2>
+            <div>
+                <select th:field="*{battSpec}">
+                    <option th:each="b : ${allBatts}" th:value="${b}" th:utext="${b}"></option>
+                </select>
+            </div>
+
+            <input type="hidden" th:field="*{date}" id="dateStr">
+            <div class="createB">
+                <button class="deleteButton dBColor"type="submit">Create Scheduling</button>
+            </div>
+            
+
+        </form>
+
+
+    </main>
+    <footer>
+        <div class="footer">
+        <div class="row">
+            <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+
+            <div class="row">
+                Bswap Copyright © 2022 - All rights reserved 
+            </div>
+        </div>
+    </footer>
+</body>
+    <script type="text/javascript">
+        function changeFunc7(){
+            var selectBox = document.getElementById("selectBox7");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;
+            document.getElementById("dateStr").value=selectedValue;
+        }
+
+        function changeFunc8(){
+            var selectBox = document.getElementById("selectBox8");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;
+            document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc9(){
+            var selectBox = document.getElementById("selectBox9");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;
+            document.getElementById("dateStr").value=selectedValue;
+        }
+
+        function changeFunc10(){
+            var selectBox = document.getElementById("selectBox10");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;
+            document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc11(){
+            var selectBox = document.getElementById("selectBox11");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+
+        function changeFunc12(){
+            var selectBox = document.getElementById("selectBox12");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc13(){
+            var selectBox = document.getElementById("selectBox13");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+
+        function changeFunc14(){
+            var selectBox = document.getElementById("selectBox14");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc15(){
+            var selectBox = document.getElementById("selectBox15");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc16(){
+            var selectBox = document.getElementById("selectBox16");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc17(){
+            var selectBox = document.getElementById("selectBox17");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+
+        function changeFunc18(){
+            var selectBox = document.getElementById("selectBox18");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc19(){
+            var selectBox = document.getElementById("selectBox19");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+
+        function changeFunc20(){
+            var selectBox = document.getElementById("selectBox20");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+        function changeFunc21(){
+            var selectBox = document.getElementById("selectBox21");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var yC = document.getElementById("yourChoice");
+            yC.innerHTML=selectedValue;document.getElementById("dateStr").value=selectedValue;
+        }
+
+
+    </script>
+</html>
